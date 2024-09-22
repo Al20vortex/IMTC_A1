@@ -11,6 +11,17 @@ public class MoveScript : MonoBehaviour
     public GameObject projectilePrefab;
     // Projectile speed
     public float projectileSpeed = 50f;
+    public AudioClip fireSound;           // Assign your firing sound in the Inspector
+    private AudioSource audioSource;      // Reference to the AudioSource component
+
+    void Start()
+    {
+        // Get the AudioSource component attached to this GameObject
+        audioSource = GetComponent<AudioSource>();
+
+        // Ensures the audio doesn't start playing right away
+        audioSource.playOnAwake = false;
+    }
 
     void Update()
     {
@@ -42,7 +53,6 @@ public class MoveScript : MonoBehaviour
             // Rotate to the right
             transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
         }
-
     }
 
     void fireProjectile()
@@ -62,5 +72,6 @@ public class MoveScript : MonoBehaviour
 
         // Set the projectile to move forward
         rb.linearVelocity = transform.forward * projectileSpeed;
+        audioSource.PlayOneShot(fireSound);
     }
 }

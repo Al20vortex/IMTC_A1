@@ -340,6 +340,7 @@ MonoBehaviour:
   rotationSpeed: 500
   projectilePrefab: {fileID: 7982511731828180913, guid: a19fedea1912249a58024ba47468a8b2, type: 3}
   projectileSpeed: 50
+  fireSound: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

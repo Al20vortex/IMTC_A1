@@ -338,8 +338,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   rotationSpeed: 500
-  projectilePrefab: {fileID: 0}
-  projectileSpeed: 5
+  projectilePrefab: {fileID: 7982511731828180913, guid: a19fedea1912249a58024ba47468a8b2, type: 3}
+  projectileSpeed: 50
+  fireSound: {fileID: 8300000, guid: 9fc54c63029f34b6c9b5be371d6a7ea0, type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
