@@ -11,8 +11,10 @@ public class MoveScript : MonoBehaviour
     public GameObject projectilePrefab;
     // Projectile speed
     public float projectileSpeed = 50f;
-    public AudioClip fireSound;           // Assign your firing sound in the Inspector
-    private AudioSource audioSource;      // Reference to the AudioSource component
+
+    // Set up the objects for firing.
+    public AudioClip fireSound;
+    private AudioSource audioSource;
 
     void Start()
     {
