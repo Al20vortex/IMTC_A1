@@ -1,8 +1,13 @@
 using UnityEngine;
 
+
+/*
+    This script is responsible for the movement behaviour of the player square. 
+    It listens for key events, handles the spawning of projectilePrefabs
+    and plays a laser sound effect when firing.  
+*/
 public class MoveScript : MonoBehaviour
 {
-
     // Set the speed at which the cube moves in its forward direction 
     public float speed = 1f;          
     // How many degrees the Cube Rotates per press  
@@ -12,7 +17,7 @@ public class MoveScript : MonoBehaviour
     // Projectile speed
     public float projectileSpeed = 50f;
 
-    // Set up the objects for firing.
+    // Set up the objects for the firing sound.
     public AudioClip fireSound;
     private AudioSource audioSource;
 
@@ -59,10 +64,10 @@ public class MoveScript : MonoBehaviour
 
     void fireProjectile()
     {
-        // Instantiate the projectile at the cube's position and rotation
+        // Instantiate the projectile from projectilePrefab at the cube's position and rotation
         GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.rotation);
 
-        // Add a Rigidbody component if not already present
+        // Add a Rigidbody component if it is not already present
         // Rigid body here is used to give the projectile a velocity.
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
         if (rb == null)
@@ -73,8 +78,8 @@ public class MoveScript : MonoBehaviour
         // Disable gravity on the projectile (optional)
         rb.useGravity = false;
 
-        // Set the projectile to move forward
+        // Set the projectile to move forward with a velocity of projectileSpeed
         rb.linearVelocity = transform.forward * projectileSpeed;
-        audioSource.PlayOneShot(fireSound);
+        audioSource.PlayOneShot(fireSound); // Play the laser sound.
     }
 }
