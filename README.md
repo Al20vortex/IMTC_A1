@@ -1,5 +1,4 @@
-Hi this is my assignment 1 (Alex Deaconu)! To play my game, you can move use WASD to move the cube around, and move the mouse to move the camera left and right. Press spacebar to fire. 
-
+Hello, welcome to Alex Deaconu's assignment 1 for IMTC 505! To play my game, you can use WASD to move the cube around, and move the mouse to move the camera left and right. Press spacebar to fire lasers. 
 
 Interactive elements:
 - Something that changes position: the cube moves with WASD, and the lasers that get shot out move straight in the direction they are shot.
