@@ -63,6 +63,7 @@ public class MoveScript : MonoBehaviour
         GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.rotation);
 
         // Add a Rigidbody component if not already present
+        // Rigid body here is used to give the projectile a velocity.
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
         if (rb == null)
         {
